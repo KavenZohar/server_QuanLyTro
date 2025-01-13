@@ -39,7 +39,7 @@ class log {
     // save strange request
     static StrangeRequest(req) {
         const file = "./logs/strange_request.log";
-        const message = `==>[${new Date().toISOString()}]--[IP: ${req.ip}]: "${req.method}" "${req.hostname}${req.originalUrl} IPs: ${req.ips}"\n`;
+        const message = `==>[${new Date().toISOString()}]--[IP: ${req.ip}]: "${req.method}", "${req.hostname}${req.originalUrl}", "IPs: ${req.ips}"\n`;
 
         Log(file, message);
     }

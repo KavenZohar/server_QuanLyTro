@@ -9,6 +9,9 @@ const sql = {
         port: process.env.DB_PORT
 }
 
+const imgKey = process.env.IMG_KEY;
+
 export {
-    sql
+    sql,
+    imgKey
 };
