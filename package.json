@@ -1,0 +1,35 @@
+{
+  "name": "server_quanlytro",
+  "version": "1.0.0",
+  "description": "Server",
+  "keywords": [
+    "Server",
+    "Quan",
+    "Ly",
+    "Tro"
+  ],
+  "homepage": "https://github.com/KavenZohar/server_QuanLyTro#readme",
+  "bugs": {
+    "url": "https://github.com/KavenZohar/server_QuanLyTro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KavenZohar/server_QuanLyTro.git"
+  },
+  "license": "ISC",
+  "author": "Kaven",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs-extra": "^11.2.0",
+    "pg": "^8.13.1"
+  }
+}

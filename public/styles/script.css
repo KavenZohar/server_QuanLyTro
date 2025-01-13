@@ -1,0 +1,124 @@
+body::-webkit-scrollbar {
+    width: 17px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    background-color: hsl(0, 0%, 67%);
+}
+
+
+/*===== font start ======*/
+
+/* light mode */
+body.light-mode .name > h3 {
+    color: #4F535D;
+}
+body.light-mode .cl {
+    color: #5B5E68;
+}
+body.light-mode .cl-80 {
+    color: rgba(91, 94, 104, 0.8);
+}
+body.light-mode .content p {
+    color: rgba(91, 94, 104, 0.65);
+}
+.cl-purple , .content h3 {
+    color: #7B66FF;
+}
+body.light-mode .hv-purple:hover, body.light-mode a.pick {
+    color: white;
+    background-color: #7B66FF;
+}
+
+
+body.light-mode #search > svg {
+    color: rgba(91, 94, 104, 0.60);
+}
+body.light-mode #search-input::placeholder {
+    color: rgba(91, 94, 104, 0.4);
+}
+body.light-mode .line > .lineY {
+    border-right: 1px solid rgba(91, 94, 104, 0.4);
+}
+body.light-mode .line > .lineX {
+    border-top: 1px solid rgba(91, 94, 104, 0.2);
+}
+
+
+
+/* dark mode */
+body.dark-mode .name > h3 {
+    color: #E5E7F1;
+}
+body.dark-mode .cl {
+    color: #E5E7F1;
+}
+body.dark-mode .cl-80 {
+    color: rgba(229, 231, 241, 0.8);
+}
+body.dark-mode .content p {
+    color: rgba(229, 231, 241, 0.65);
+}
+body.dark-mode .hv-purple:hover, body.dark-mode a.pick {
+    color: black;
+    background-color: #7B66FF;
+}
+body.dark-mode #search > svg {
+    color: rgba(229, 231, 241, 0.6);
+}
+body.dark-mode #search-input::placeholder {
+    color: rgba(229, 231, 241, 0.4);
+}
+body.dark-mode .line > .lineY {
+    border-right: 1px solid rgba(229, 231, 241, 0.4);
+}
+body.dark-mode .line > .lineX {
+    border-top: 1px solid rgba(229, 231, 241, 0.2);
+}
+
+/*===== font end ======*/
+
+
+
+
+/*===== bg start ======*/
+
+/* light mode */
+body.light-mode, body.light-mode .add-btn span {
+    background-color: #F0F1F6;
+}
+body.light-mode .bg-box{
+    background-color: #ffffff;
+}
+body.light-mode .info {
+    background-color: #E4E5ED;
+}
+body.light-mode .box-sd {
+    box-shadow: 0px 0px 11px rgba(91, 94, 104, 0.15),
+                0px 0px 11px rgba(91, 94, 104, 0.15);
+}
+
+
+
+
+
+
+/* dark mode */
+body.dark-mode, body.dark-mode .add-btn span {
+    background-color: #0D131A;
+}
+body.dark-mode .bg-box{
+    background-color: #1D2833;
+}
+body.dark-mode .info {
+    background-color: #141D28;
+}
+body.dark-mode .box-sd {
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.8),
+                0px 0px 11px rgba(0, 0, 0, 0.8);
+}
+
+/*===== bg end ======*/
