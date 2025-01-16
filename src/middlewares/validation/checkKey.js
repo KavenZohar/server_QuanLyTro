@@ -3,6 +3,7 @@ import log from "../../utils/logs.js";
 
 const checkImgKey = (req, res, next) => {
     const base64Key = req.query.key; // get the key
+    if (base64Key === undefined) return res.status(403).send("Access Denied"); // if base64 does not exist
 
     try {
         const imageKey = atob(base64Key); // decode base64, return key
@@ -15,6 +16,7 @@ const checkImgKey = (req, res, next) => {
         // save error
         log.StrangeRequest(req);
         log.ErrorServer(error.message);
+        
         console.error(error.message);
 
         // return 403
