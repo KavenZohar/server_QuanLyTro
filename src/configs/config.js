@@ -11,10 +11,10 @@ const sql = {
 
 const imgKey = process.env.IMG_KEY;
 
-const hostName = "localhost:" + process.env.PORT;
+const hostUrl = "http://localhost:" + process.env.PORT;
 
 export {
     sql,
     imgKey,
-    hostName
+    hostUrl
 };
