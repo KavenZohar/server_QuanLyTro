@@ -2,7 +2,7 @@ import express from "express";
 const imgRoutes = express.Router();
 
 import { checkImgKey } from "../middlewares/validation/checkKey.js";
-import sendImgController from "../controllers/sendImgController.js";
+import sendImgController from "../controllers/clientControllers/sendImgController.js";
 
 imgRoutes.get("/:imgName", [checkImgKey, sendImgController]); // Check the key, if key is correct, sendImgController will send an image
 
