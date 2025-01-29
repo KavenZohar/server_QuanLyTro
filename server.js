@@ -7,5 +7,5 @@ const port = process.env.PORT;
 
 // start server
 app.listen(port, () => {
-    console.log(`Server is starting on port: ${port}`);
+    console.log(`Server is starting on port: http://localhost:${port}/`);
 });
