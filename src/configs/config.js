@@ -9,12 +9,22 @@ const sql = {
         port: process.env.DB_PORT
 }
 
+const sessionConfig = {
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24
+    }
+}
+
 const imgKey = process.env.IMG_KEY;
 
 const hostUrl = "http://localhost:" + process.env.PORT;
 
 export {
     sql,
+    sessionConfig,
     imgKey,
     hostUrl
 };
