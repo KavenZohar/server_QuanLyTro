@@ -1,9 +1,14 @@
+// route to send private images
+
 import express from "express";
 const imgRoutes = express.Router();
 
-import { checkImgKey } from "../middlewares/validation/checkKey.js";
-import sendImgController from "../controllers/clientControllers/sendImgController.js";
+// import the imgAuth function to handle key authentication
+import imgAuth from "../middlewares/validation/imgAuth.js";
 
-imgRoutes.get("/:imgName", [checkImgKey, sendImgController]); // Check the key, if key is correct, sendImgController will send an image
+import { sendRoomImgController, sendAvatarImgController } from "../controllers/clientControllers/sendImgController.js";
 
-export default imgRoutes;
+imgRoutes.get("/room/:imgName", [imgAuth.checkKey(), sendRoomImgController]); // check the key, if key is correct, sendRoomImgController will send an image
+imgRoutes.get("/avatar/:imgName", [imgAuth.checkKey(), sendAvatarImgController]); // check the key, if key is correct, sendAvatarImgController will send an image
+
+export default imgRoutes; // export to lib/app.js
