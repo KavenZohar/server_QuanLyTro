@@ -26,6 +26,10 @@ const authAdminLogin = (req, res, next) => {
         if (!user) return res.status(401).json({ message: info.message, success: user });
         req.login(user, (err) => {
             if (err) return res.status(500).json({ message: "Login error.", success: false });
+
+            // save login history
+            log.loginHistory(req, user, "admin");
+
             return res.json({ message: info.message, success: true});
         });
     })(req, res, next);
