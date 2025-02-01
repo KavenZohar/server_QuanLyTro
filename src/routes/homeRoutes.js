@@ -14,4 +14,4 @@ homeRoutes.get("/", getHomeController);
 // if already logged in, redirect to the admin home page, otherwise send the admin login route.
 homeRoutes.get("/auth/admin/login", [loginCheck, getLoginController]);
 
-export default homeRoutes;
+export default homeRoutes; // export to lib/app.js
