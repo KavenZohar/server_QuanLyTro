@@ -4,7 +4,7 @@ import express from "express";
 const imgRoutes = express.Router();
 
 // import the imgAuth function to handle key authentication
-import imgAuth from "../middlewares/validation/imgAuth.js";
+import imgAuth from "../middlewares/auth/imgAuth.js";
 
 import { sendRoomImgController, sendAvatarImgController } from "../controllers/userControllers/sendImgController.js";
 
