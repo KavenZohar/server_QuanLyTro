@@ -4,7 +4,7 @@
 import bcrypt from "bcrypt";
 import { Strategy } from "passport-local";
 
-import { admin } from "../../db/models.js";
+import db from "../../db/db.js";
 import { passport } from "../../lib/app.js";
 import log from "../../utils/logs.js";
 
@@ -48,7 +48,7 @@ const authAdminLogout = (req, res) => {
 // verify username and password from the database
 passport.use("local", new Strategy(async function verify(username, password, cb) {
     try {
-        const user = await admin.findByUsername(username); // find user by username from the database
+        const user = await db.admins.findByUsername(username); // find user by username from the database
         console.log(user);
         if (!user) {
             // if the user does not exist, callback to the authAdminLogin function
@@ -88,7 +88,7 @@ passport.serializeUser((user, cb) => {
 
 // on the next request, retrieve user from session and automatically log in
 passport.deserializeUser( async (id, cb) => {
-    const user = await admin.findById(id);
+    const user = await db.admins.findById(id);
     cb(null, user);
 });
 
