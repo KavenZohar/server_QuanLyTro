@@ -94,6 +94,6 @@ passport.deserializeUser( async (id, cb) => {
 
 export {
     authAdminCheck, // export to the lib/app.js
-    authAdminLogin, // export to the routes/api/authApiRoutes.js
-    authAdminLogout // export to the routes/api/authApiRoutes.js
+    authAdminLogin, // export to the routes/authApiRoutes.js
+    authAdminLogout // export to the routes/authApiRoutes.js
      };
