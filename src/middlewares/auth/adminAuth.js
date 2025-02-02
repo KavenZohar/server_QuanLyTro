@@ -49,7 +49,6 @@ const authAdminLogout = (req, res) => {
 passport.use("local", new Strategy(async function verify(username, password, cb) {
     try {
         const user = await db.admins.findByUsername(username); // find user by username from the database
-        console.log(user);
         if (!user) {
             // if the user does not exist, callback to the authAdminLogin function
             return cb(null, false, { message: "Tên đăng nhập không tồn tại." });
