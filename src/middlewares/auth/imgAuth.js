@@ -38,4 +38,4 @@ const imgAuth = {
     }
 }
 
-export default imgAuth;
+export default imgAuth; // checkKey export to routes/imgRoutes.js, key export to db/models/
