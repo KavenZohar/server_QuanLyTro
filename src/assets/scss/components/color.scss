@@ -1,0 +1,56 @@
+/*===== light mode ======*/
+$white-cl: white;
+$light-name-cl: #4F535D;
+$light-cl: #5B5E68;
+$light-cl-20: rgba(91, 94, 104, 0.2);
+$light-cl-40: rgba(91, 94, 104, 0.4);
+$light-cl-60: rgba(91, 94, 104, 0.60);
+$light-cl-65: rgba(91, 94, 104, 0.65);
+$light-cl-80: rgba(91, 94, 104, 0.8);
+$cl-purple: #7B66FF;
+$cl-purple-hover: rgb(106, 88, 221);
+
+$light-bg: #F0F1F6;
+$light-info-bg: #E4E5ED;
+$light-bg-box: white;
+$light-box-sd: rgba(91, 94, 104, 0.15);
+
+@mixin light-pick {
+    color: $white-cl;
+    background-color: $cl-purple;
+}
+
+
+
+
+
+/*===== dark mode ======*/
+$black-cl: black;
+$dark-name-cl: #E5E7F1;
+$dark-cl: #E5E7F1;
+$dark-cl-20: rgba(229, 231, 241, 0.2);
+$dark-cl-40: rgba(229, 231, 241, 0.4);
+$dark-cl-60: rgba(229, 231, 241, 0.6);
+$dark-cl-65: rgba(229, 231, 241, 0.65);
+$dark-cl-80: rgba(229, 231, 241, 0.8);
+
+$dark-bg: #0D131A;
+$dark-bg-box: #1D2833;
+$dark-info-bg: #141D28;
+$dark-box-sd: rgba(0, 0, 0, 0.8);
+
+@mixin dark-pick {
+    color: $black-cl;
+    background-color: $cl-purple;
+}
+
+
+
+
+
+/*===== other ======*/
+$notify-cl: #FF9D47;
+$buttonHover-cl-10: rgba(100, 111, 121, 0.1);
+$buttonHover-cl-20: rgba(100, 111, 121, 0.2);
+$rangeAdd-hover-cl: rgba(117, 121, 138, 0.2);
+$border-cl: rgba(91, 94, 104, 0.19);

@@ -1,7 +1,7 @@
 // this contains functions for handling private image transmission
 
 // function to handle sending room images
-const sendRoomImgController = (req, res) => {
+const sendRoomImg = (req, res) => {
     const fileName = req.params.imgName; // get the image name
     res.sendFile(`${process.cwd()}/src/assets/imgs/${fileName}`, (error) => { // send to user
         if (error) {
@@ -11,7 +11,7 @@ const sendRoomImgController = (req, res) => {
 }
 
 // function to handle sending the admin's avatar image
-const sendAvatarImgController = (req, res) => {
+const sendAvatarImg = (req, res) => {
     const fileName = req.params.imgName; // get the image name
     res.sendFile(`${process.cwd()}/src/assets/avatar/${fileName}`, (error) => { // send to user
         if (error) {
@@ -20,4 +20,4 @@ const sendAvatarImgController = (req, res) => {
     });
 }
 
-export { sendRoomImgController, sendAvatarImgController }; // export to routes/imgRoutes.js
+export { sendRoomImg, sendAvatarImg }; // export to routes/imgRoutes.js

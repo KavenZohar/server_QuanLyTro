@@ -1,20 +1,38 @@
 import express from "express";
-import roomsRoutes from "../routes/roomsRoutes.js";
-import manageRoutes from "../routes/manageRoutes.js";
-import imgRoutes from "../routes/imgRoutes.js";
+import session from "express-session";
+import bodyParser from "body-parser";
+import passport from "passport";
+
+// middleware function for admin authentication
+import { authAdminCheck } from "../middlewares/auth/adminAuth.js";
+
+import routes from "../routes/routes.js";
+
+// session configuration options
+import { sessionConfig } from "../configs/config.js";
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"));
 
-// router for api
-// data retrieval path using ranges
-app.use("/api/ranges", roomsRoutes);
+app.use(session(sessionConfig));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // router for private assets
-app.use("/img", imgRoutes);
+app.use("/img", routes.img);
 
-// router for user
-app.use("/manage", manageRoutes);
+// router to handle unauthenticated user routes
+app.use("/", routes.home);
+
+// router to handle API login and logout routes
+app.use("/api/auth", routes.authApi);
+
+// router to handle interactions from the admin
+app.use("/admin", [authAdminCheck, routes.admin]);
 
 export default app; // export to server.js
+export { passport }; // export to middlewares/auth/adminAuth.js

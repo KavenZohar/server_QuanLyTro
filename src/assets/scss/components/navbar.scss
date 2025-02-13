@@ -1,0 +1,179 @@
+@import "color.scss";
+
+%width-height-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%flex-item-center {
+    display: flex;
+    align-items: center;
+}
+
+%flex-item-content-center {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.nav1-container {
+    position: fixed;
+    width: 65%;
+    -webkit-backdrop-filter: blur(17px);
+    backdrop-filter: blur(17px);
+    padding-top: 9px;
+    z-index: 1;
+
+    .mode-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 7px;
+
+        .search {
+            position: relative;
+            width: 41%;
+            height: 39px;
+
+            .search-input {
+                @extend %width-height-100;
+                border: none;
+                padding: 0px 39px 0 39px;
+                border-radius: 9px;
+            }
+            .search-input:focus-visible{
+                outline: none;
+                box-shadow: 0px 0px 7px $cl-purple;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 14px;
+                transform: translateY(-50%);
+            }
+        }
+    
+    }
+
+
+
+    .info {
+        @extend %flex-item-center;
+        justify-content: space-between;
+        border-radius: 9px;
+        padding: 0 16px 0 16px;
+        margin-top: 9px;
+
+        .info-list {
+            @extend %flex-item-center;
+            justify-content: space-between;
+            width: 95.3%;
+            li {
+                @extend %flex-item-center;
+                justify-content: space-between;
+                height: 43px;
+                cursor: default;
+
+                span, svg {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+
+        .more {
+            @extend %flex-item-center;
+            position: relative;
+            height: 43px;
+
+            #more-btn {
+                @extend %flex-item-center;
+                margin-left: 9px;
+                border-radius: 9px;
+                height: 100%;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            
+                svg {
+                    pointer-events: none;
+                }
+            }
+            #more-btn:hover {
+                background-color: $buttonHover-cl-10;
+            }
+
+
+            #more_content {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -150%;
+            
+                ul {
+                    list-style: none;
+                    border-radius: 9px;
+                    width: 116px;
+                    padding: 7px 0 7px 0;
+                    border: solid 1px $border-cl;
+                }
+                li {
+                    padding: 3px 0 3px 7px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.nav2-container {
+    position: fixed;
+    width: 81%;
+    -webkit-backdrop-filter: blur(17px);
+    backdrop-filter: blur(17px);
+    padding-top: 9px;
+    z-index: 1;
+
+    .mode-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 7px;
+
+        .search {
+            position: relative;
+            width: 32.9%;
+            height: 39px;
+
+            .search-input {
+                @extend %width-height-100;
+                border: none;
+                padding: 0px 39px 0 39px;
+                border-radius: 9px;
+            }
+            .search-input:focus-visible{
+                outline: none;
+                box-shadow: 0px 0px 7px $cl-purple;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 14px;
+                transform: translateY(-50%);
+            }
+        }
+        .modeBtn-addBtn {
+            @extend %flex-item-center;
+            justify-content: end;
+        }
+    }
+}

@@ -1,3 +1,7 @@
+const checkboxPass = document.getElementById("checkboxPass");
+
+
+
 // Mode
 const Theme = localStorage.getItem("theme");
 
@@ -21,7 +25,7 @@ function Mode(onMode, offMode) {
 
 
 // option add room
-const moreHTML = `<ul class="l-stl-n bd-rd-9 bd-box bg-box">
+const moreHTML = `<ul class="box-sd bg-box">
                                     <li class="more-option hv-purple">Thêm phòng</li>
                                     <li class="more-option hv-purple">Sắp xếp</li>
                                 </ul>`;
@@ -47,3 +51,4 @@ function moreBtn() {
 function clearMoreContent() {
     moreContent.innerHTML = "";
 }
+

@@ -1,0 +1,160 @@
+@import "color.scss";
+
+
+/*===== light mode start ======*/
+/* font */
+body.light-mode { 
+    .name > h3 {
+        color: $light-name-cl;
+    }
+
+    .cl {
+        color: $light-cl;
+    }
+
+    .cl-80 {
+        color: $light-cl-80;
+    }
+
+    .content > p {
+        color: $light-cl-65;
+    }
+
+    a.pick {
+        transition: background-color 0.2s;
+    }
+    a.pick:hover {
+        background-color: $cl-purple-hover;
+    }
+    .hv-purple:hover, a.pick {
+        @include light-pick;
+    }
+
+    .search-icon-cl {
+        color: $light-cl-60;
+    }
+
+    .search-input::placeholder {
+        color: $light-cl-40;
+    }
+
+    .line > .lineY {
+        border-right: 1px solid $light-cl-40;
+    }
+
+    .line > .lineX {
+        border-top: 1px solid $light-cl-20;
+    }
+}
+
+
+.cl-purple, .content h3 {
+    color: $cl-purple;
+}
+/* font end */
+
+
+/* background */
+body.light-mode {
+    background-color: $light-bg;
+
+    .add-btn span {
+        background-color: $light-bg;
+    }
+
+    .bg-box{
+        background-color: $light-bg-box;
+    }
+
+    .info {
+        background-color: $light-info-bg;
+    }
+
+    .box-sd {
+        box-shadow: 0px 0px 11px $light-box-sd,
+                    0px 0px 11px $light-box-sd;
+    }
+}
+/* background end */
+
+/*===== light mode end ======*/
+
+
+
+
+
+
+/*===== dark mode start ======*/
+/* font */
+body.dark-mode {
+
+    .name > h3 {
+        color: $dark-name-cl;
+    }
+
+    .cl {
+        color: $dark-cl;
+    }
+
+    .cl-80 {
+        color: $dark-cl-80;
+    }
+
+    .content p {
+        color: $dark-cl-65;
+    }
+
+    a.pick {
+        transition: background-color 0.2s;
+    }
+    a.pick:hover {
+        background-color: $cl-purple-hover;
+    }
+    .hv-purple:hover, a.pick {
+        @include dark-pick;
+    }
+
+    .search-icon-cl {
+        color: $dark-cl-60;
+    }
+
+    .search-input::placeholder {
+        color: $dark-cl-40;
+    }
+
+    .line > .lineY {
+        border-right: 1px solid $dark-cl-40;
+    }
+
+    .line > .lineX {
+        border-top: 1px solid $dark-cl-20;
+    }
+}
+/* font end */
+
+
+/* background */
+body.dark-mode {
+    background-color: $dark-bg;
+
+    .add-btn span {
+        background-color: $dark-bg;
+    }
+
+    .bg-box{
+        background-color: $dark-bg-box;
+    }
+
+    .info {
+        background-color: $dark-info-bg;
+    }
+
+    .box-sd {
+        box-shadow: 0px 0px 11px $dark-box-sd,
+                    0px 0px 11px $dark-box-sd;
+    }
+
+}
+/* background end */
+
+/*===== dark mode end ======*/

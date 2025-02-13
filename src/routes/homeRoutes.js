@@ -5,13 +5,13 @@ const homeRoutes = express.Router();
 
 import loginCheck from "../middlewares/validation/checkLogin.js";
 
-import getHomeController from "../controllers/userControllers/getHomeController.js";
-import getLoginController from "../controllers/userControllers/adminControllers/getLoginController.js";
+import getHome from "../controllers/otherControllers/getHome.js";
+import getLogin from "../controllers/adminControllers/getLogin.js";
 
-homeRoutes.get("/", getHomeController);
+homeRoutes.get("/", getHome);
 
 // admin login route: The checkLog function checks whether the admin is logged in.
 // if already logged in, redirect to the admin home page, otherwise send the admin login route.
-homeRoutes.get("/auth/admin/login", [loginCheck, getLoginController]);
+homeRoutes.get("/auth/admin/login", [loginCheck, getLogin]);
 
-export default homeRoutes; // export to lib/app.js
+export default homeRoutes; // export to routes.js

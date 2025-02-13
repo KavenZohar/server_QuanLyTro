@@ -1,0 +1,21 @@
+@import "components/layout.scss";
+@import "components/font.scss";
+@import "components/other.scss";
+@import "components/menu.scss";
+@import "components/navbar.scss";
+@import "components/button.scss";
+@import "components/rooms.scss";
+@import "components/ranges.scss";
+@import "components/script.scss";
+
+
+body::-webkit-scrollbar {
+    width: 17px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+    background-color: hsl(0, 0%, 67%);
+}

@@ -6,9 +6,8 @@ const imgAuth = {
     key: async function () {
         // extract a part of the admin's encrypted password to use as an image key
         const user = await db.admins.findById(1);
-        const imgKey_1 = user.password.slice(5, 23);
-        const imgKey_2 = user.password.slice(8, 11);
-        this.imgKey = md5(imgKey_1) + md5(imgKey_2);
+        const imgKey = user.password.slice(5, 23);
+        this.imgKey = md5(imgKey);
 
         // re-encrypt the key
         const base64Key = btoa(this.imgKey);

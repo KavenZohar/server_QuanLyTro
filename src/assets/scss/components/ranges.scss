@@ -1,0 +1,76 @@
+@import "color.scss";
+
+%flex-item-center {
+    display: flex;
+    align-items: center;
+}
+
+%flex-item-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.range-container {
+    position: fixed;
+    width: 15%;
+    height: 97dvh;
+    margin-top: 9px;
+    border-radius: 19px;
+    right: 0;
+
+    svg {
+        margin-left: 13px;
+    }
+    p {
+        margin-left: 32%;
+    }
+    a {
+        @extend %flex-item-center;
+        text-decoration: none;
+        height: 100%;
+        transition: all 0.1s;
+        border-radius: 9px;
+    }
+}
+
+.range-title {
+    @extend %flex-item-content-center;
+    padding: 16px 0 16px 0;
+    cursor: default;
+}
+.range-list {
+    list-style: none;
+    padding: 0 13px 0 13px;
+    li {
+        height: 47px;
+    }
+}
+
+.add-btn {
+    position: absolute;
+    width: 89%;
+    height: 47px;
+    bottom: 10px;
+    padding: 0 13px 0 13px;
+}
+#add_range {
+    @extend %flex-item-content-center;
+    height: 100%;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+
+    svg {
+        height: 100%;
+        width: auto;
+        margin: 0;
+    }
+}
+#add_range:hover {
+    background-color: $rangeAdd-hover-cl;
+}

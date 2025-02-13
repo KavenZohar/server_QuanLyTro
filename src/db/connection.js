@@ -1,7 +1,6 @@
 import pg from "pg";
-import { sql } from "../configs/config.js";
+import { sqlConfig } from "../configs/config.js";
 
-const db = new pg.Client(sql); // login postgreSQL
-db.connect(); // connect database
+const pgPool = new pg.Pool(sqlConfig); // login postgreSQL
 
-export default db; // export to queries.js
+export default pgPool; // export to models/
